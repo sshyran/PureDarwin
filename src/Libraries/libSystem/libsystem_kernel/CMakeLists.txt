@@ -149,6 +149,7 @@ target_sources(libsystem_kernel_static PRIVATE
     wrappers/unix03/setrlimit.c
 
     custom/errno.c
+    os/alloc_once.c
 )
 
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/public_include/server)
