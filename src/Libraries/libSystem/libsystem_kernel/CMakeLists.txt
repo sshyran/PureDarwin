@@ -243,6 +243,9 @@ target_link_libraries(libsystem_kernel PRIVATE libsystem_kernel_static)
 target_link_options(libsystem_kernel PRIVATE -umbrella System -all_load)
 install(TARGETS libsystem_kernel DESTINATION /usr/lib/system COMPONENT BaseSystem)
 
-
 add_library(libsystem_kernel_private_headers INTERFACE)
 target_include_directories(libsystem_kernel_private_headers INTERFACE private_include)
+target_include_directories(libsystem_kernel_private_headers INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/private_include)
+
+add_library(libsystem_kernel_bootstrap_headers INTERFACE)
+target_include_directories(libsystem_kernel_bootstrap_headers INTERFACE bootstrap_include)
