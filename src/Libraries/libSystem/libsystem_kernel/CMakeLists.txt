@@ -250,3 +250,4 @@ target_include_directories(libsystem_kernel_private_headers INTERFACE ${CMAKE_CU
 
 add_library(libsystem_kernel_bootstrap_headers INTERFACE)
 target_include_directories(libsystem_kernel_bootstrap_headers INTERFACE bootstrap_include)
+target_compile_options(libsystem_kernel INTERFACE -Wno-nullability-completeness)
